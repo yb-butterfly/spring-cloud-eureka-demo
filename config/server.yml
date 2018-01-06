@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    register-with-eureka: false # 表示是否将自己注册到Eureka Server，默认为true
+    fetch-registry: false # 表示是否从Eureka Server获取注册信息，默认为true
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+  server:
+      enable-self-preservation: false           # 关闭自我保护模式（缺省为打开）
+      eviction-interval-timer-in-ms: 5000       # 续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
+server:
+  port: 8090

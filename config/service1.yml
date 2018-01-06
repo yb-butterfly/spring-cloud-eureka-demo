@@ -1,0 +1,19 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: time-server
+
+
+eureka:
+  client:
+    register-with-eureka: true # 表示是否将自己注册到Eureka Server，默认为true
+    fetch-registry: true # 表示是否从Eureka Server获取注册信息，默认为true
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+location:
+  country: china
